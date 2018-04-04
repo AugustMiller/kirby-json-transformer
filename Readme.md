@@ -15,6 +15,15 @@ Ultimately, passing data from the back- end to dynamic front-end components shou
 
 As mentioned above, the recent addition of [Content Representations](https://getkirby.com/docs/developer-guide/advanced/representations) are a great step, and the output of this plugin ough to be compatible with a basic `template.json.php` representation definition.
 
+# Notes
+
 I'll update this with ideas, until a time when past supporting work can be extracted and packaged into plugin.
+
+- Review [`JsonSerializable` interface](https://secure.php.net/JsonSerializable) to see if we couldn't shim this in without a plugin, i.e. via Kirby's custom page models:
+  ```php
+  class MyTemplatePage extends Page implements JsonSerializable {
+    public function jsonSerialize () { return [ /* ... */ ]; }
+  }
+  ```
 
 :deciduous_tree:
