@@ -25,5 +25,6 @@ I'll update this with ideas, until a time when past supporting work can be extra
     public function jsonSerialize () { return [ /* ... */ ]; }
   }
   ```
+- What we're really describing here is a GraphQL extension. Is there any sense in replicating a great deal of that spec, when we might be able to shim in proper GraphQL support? Maybe a plugin exists already?
 
 :deciduous_tree:
